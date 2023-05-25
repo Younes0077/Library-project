@@ -1,7 +1,7 @@
-from ui_py.remove_book_ui import RemovePersonUi
+from ui_py.remove_book_ui import RemoveBookUi
 
 
-class MyRemoveBook(RemovePersonUi):
+class MyRemoveBook(RemoveBookUi):
     def __init__(self):
         super().__init__()
 

@@ -6,23 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>685</width>
-    <height>212</height>
+    <width>633</width>
+    <height>213</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#8d99ae;</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QWidget" name="widget" native="true">
      <property name="styleSheet">
-      <string notr="true">background-color:rgb(184,184,184);
+      <string notr="true">background-color:#2b2d42;
 border-radius:10px;</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <widget class="QFrame" name="frame">
+        <property name="styleSheet">
+         <string notr="true">background-color:#8d99ae;</string>
+        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -37,6 +43,9 @@ border-radius:10px;</string>
              <pointsize>14</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color:white</string>
+           </property>
            <property name="text">
             <string>Remove person</string>
            </property>
@@ -49,6 +58,9 @@ border-radius:10px;</string>
              <pointsize>11</pointsize>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color:white</string>
+           </property>
            <property name="text">
             <string>National_code:</string>
            </property>
@@ -60,10 +72,16 @@ border-radius:10px;</string>
             <string notr="true">background-color:rgb(255,255,255);
 padding:3px;</string>
            </property>
+           <property name="placeholderText">
+            <string>enter national code</string>
+           </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="label_alert">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -77,8 +95,16 @@ padding:3px;</string>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton_done">
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">background-color:#2b2d42;
+border-radius:6px;
+color:white
+</string>
      </property>
      <property name="text">
       <string>D O N E</string>
