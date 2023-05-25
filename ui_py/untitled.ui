@@ -24,12 +24,15 @@
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(204,204,204);
+       <string notr="true">background-color:#577399;
 border-radius:5px;</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QFrame" name="add_person">
+         <property name="styleSheet">
+          <string notr="true">background-color:#bdd5ea;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -52,19 +55,9 @@ border-radius:5px;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">border-radius:5px;
-background-color:rgb(189,189,189);
+background-color:#f7f7ff;
 padding:8px;
-
-QPushButton#pushButton:hover{
-background-color:rgb(144,144,144);
-padding:5px;
-}
-
-
-QPushButton#pushButton:pressed{
-background-color:rgb(144,144,144);
-padding:5px;
-}</string>
+</string>
             </property>
             <property name="text">
              <string>  Add person</string>
@@ -86,6 +79,9 @@ padding:5px;
        </item>
        <item>
         <widget class="QFrame" name="add_book">
+         <property name="styleSheet">
+          <string notr="true">background-color:#bdd5ea;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -108,14 +104,8 @@ padding:5px;
             </property>
             <property name="styleSheet">
              <string notr="true">border-radius:5px;
-background-color:rgb(189,189,189);
+background-color:#f7f7ff;
 padding:8px;
-
-QPushButton#pushButton:hover{
-background-color:rgb(144,144,144);
-padding:5px;
-}
-
 </string>
             </property>
             <property name="text">
@@ -144,6 +134,9 @@ padding:5px;
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#bdd5ea;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -166,14 +159,8 @@ padding:5px;
             </property>
             <property name="styleSheet">
              <string notr="true">border-radius:5px;
-background-color:rgb(189,189,189);
+background-color:#f7f7ff;
 padding:8px;
-
-QPushButton#pushButton:hover{
-background-color:rgb(144,144,144);
-padding:5px;
-}
-
 </string>
             </property>
             <property name="text">
@@ -196,6 +183,9 @@ padding:5px;
        </item>
        <item>
         <widget class="QFrame" name="remove_person">
+         <property name="styleSheet">
+          <string notr="true">background-color:#bdd5ea;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -218,19 +208,9 @@ padding:5px;
             </property>
             <property name="styleSheet">
              <string notr="true">border-radius:5px;
-background-color:rgb(189,189,189);
+background-color:#f7f7ff;
 padding:8px;
-
-QPushButton#pushButton:hover{
-background-color:rgb(144,144,144);
-padding:5px;
-}
-
-
-QPushButton#pushButton:pressed{
-background-color:rgb(144,144,144);
-padding:5px;
-}</string>
+</string>
             </property>
             <property name="text">
              <string>  remove person</string>
@@ -258,6 +238,9 @@ padding:5px;
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#bdd5ea;</string>
+         </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
            <widget class="QPushButton" name="pushButton_remove_book">
@@ -274,14 +257,8 @@ padding:5px;
             </property>
             <property name="styleSheet">
              <string notr="true">border-radius:5px;
-background-color:rgb(189,189,189);
+background-color:#f7f7ff;
 padding:8px;
-
-QPushButton#pushButton:hover{
-background-color:rgb(144,144,144);
-padding:5px;
-}
-
 </string>
             </property>
             <property name="text">
@@ -316,6 +293,9 @@ padding:5px;
            <height>123</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:#bdd5ea;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -338,14 +318,8 @@ padding:5px;
             </property>
             <property name="styleSheet">
              <string notr="true">border-radius:5px;
-background-color:rgb(189,189,189);
+background-color:#f7f7ff;
 padding:8px;
-
-QPushButton#pushButton:hover{
-background-color:rgb(144,144,144);
-padding:5px;
-}
-
 </string>
             </property>
             <property name="text">
@@ -371,6 +345,9 @@ padding:5px;
     </item>
     <item>
      <widget class="QWidget" name="widget_2" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color:#495867</string>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
         <widget class="QTabWidget" name="tabWidget">
@@ -381,13 +358,13 @@ padding:5px;
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">background-color:#e8f1f2;</string>
          </property>
          <property name="tabShape">
           <enum>QTabWidget::Rounded</enum>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <property name="iconSize">
           <size>
