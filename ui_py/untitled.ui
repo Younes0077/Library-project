@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1092</width>
+    <height>840</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(204,204,204);
+border-radius:5px;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QFrame" name="add_person">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton_add_person">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:5px;
+background-color:rgb(189,189,189);
+padding:8px;
+
+QPushButton#pushButton:hover{
+background-color:rgb(144,144,144);
+padding:5px;
+}
+
+
+QPushButton#pushButton:pressed{
+background-color:rgb(144,144,144);
+padding:5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>  Add person</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../.qrc">
+              <normaloff>:/Icon/Icons/user-plus.svg</normaloff>:/Icon/Icons/user-plus.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="add_book">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton_add_book">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:5px;
+background-color:rgb(189,189,189);
+padding:8px;
+
+QPushButton#pushButton:hover{
+background-color:rgb(144,144,144);
+padding:5px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string> Add book</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../.qrc">
+              <normaloff>:/Icon/Icons/book.svg</normaloff>:/Icon/Icons/book.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="add_deposits">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pushButton_add_deposits">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:5px;
+background-color:rgb(189,189,189);
+padding:8px;
+
+QPushButton#pushButton:hover{
+background-color:rgb(144,144,144);
+padding:5px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string> Add Deposits</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../.qrc">
+              <normaloff>:/Icon/Icons/folder-plus.svg</normaloff>:/Icon/Icons/folder-plus.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="remove_person">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton_remove_person">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:5px;
+background-color:rgb(189,189,189);
+padding:8px;
+
+QPushButton#pushButton:hover{
+background-color:rgb(144,144,144);
+padding:5px;
+}
+
+
+QPushButton#pushButton:pressed{
+background-color:rgb(144,144,144);
+padding:5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>  remove person</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../.qrc">
+              <normaloff>:/Icon/Icons/user-minus.svg</normaloff>:/Icon/Icons/user-minus.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_remove_book" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="pushButton_remove_book">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:5px;
+background-color:rgb(189,189,189);
+padding:8px;
+
+QPushButton#pushButton:hover{
+background-color:rgb(144,144,144);
+padding:5px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string> remove book   </string>
+            </property>
+            <property name="icon">
+             <iconset resource="../.qrc">
+              <normaloff>:/Icon/Icons/delete.svg</normaloff>:/Icon/Icons/delete.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_deposits">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>123</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>123</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QPushButton" name="pushButton_remove_deposits">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-radius:5px;
+background-color:rgb(189,189,189);
+padding:8px;
+
+QPushButton#pushButton:hover{
+background-color:rgb(144,144,144);
+padding:5px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>  reomove deposits</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../.qrc">
+              <normaloff>:/Icon/Icons/folder-minus.svg</normaloff>:/Icon/Icons/folder-minus.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="contextMenuPolicy">
+          <enum>Qt::PreventContextMenu</enum>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="tabShape">
+          <enum>QTabWidget::Rounded</enum>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="tabBarAutoHide">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="icon">
+           <iconset>
+            <normalon>:/Icon/Icons/user.svg</normalon>
+           </iconset>
+          </attribute>
+          <attribute name="title">
+           <string>person</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QTableWidget" name="tableWidgetPerson">
+             <column>
+              <property name="text">
+               <string>name </string>
+              </property>
+              <property name="icon">
+               <iconset theme="dialog-warning">
+                <normaloff>.</normaloff>.</iconset>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>last name </string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>national code</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>phone number</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>age</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>registery date</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>address</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="icon">
+           <iconset>
+            <normalon>:/Icon/Icons/book-open.svg</normalon>
+           </iconset>
+          </attribute>
+          <attribute name="title">
+           <string>books</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QTableWidget" name="tableWidgetBooks">
+             <column>
+              <property name="text">
+               <string>New Column</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Author</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ISBN</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Translator</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Publication</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>NumberOfPages</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="deposits">
+          <attribute name="icon">
+           <iconset>
+            <normalon>:/Icon/Icons/pen-tool.svg</normalon>
+           </iconset>
+          </attribute>
+          <attribute name="title">
+           <string>deposits</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QTableWidget" name="tableWidgetDeposits">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="sizeIncrement">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <column>
+              <property name="text">
+               <string>code</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>isbn</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Date Delivery To Person</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Date Delivery From Person</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionsd">
+   <property name="text">
+    <string>sd</string>
+   </property>
+  </action>
+  <action name="actionds">
+   <property name="text">
+    <string>ds</string>
+   </property>
+  </action>
+  <action name="actionds_2">
+   <property name="text">
+    <string>ds</string>
+   </property>
+  </action>
+  <action name="actionsd_2">
+   <property name="text">
+    <string>sd</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../.qrc"/>
+ </resources>
+ <connections/>
+</ui>

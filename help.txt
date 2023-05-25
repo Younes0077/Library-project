@@ -1,0 +1,15 @@
+   
+# full width in table
+        header = self.tableWidgetPerson.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(4, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(5, QHeaderView.ResizeMode.Stretch)
+
+
+# change size of column
+        self.tableWidgetDeposits.setColumnWidth(2,200)
+        self.tableWidgetDeposits.setColumnWidth(3,200)
+
