@@ -214,18 +214,18 @@ padding:3px;</string>
            </property>
           </widget>
          </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_Alert">
-        <property name="styleSheet">
-         <string notr="true">color:rgb(204, 16, 16);
+         <item>
+          <widget class="QLabel" name="label_Alert">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(204, 16, 16);
 margin-left:3px</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>

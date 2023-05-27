@@ -60,6 +60,14 @@ class MyRegisteryUi(registeryUi):
 
             self.label_Alert.setText("data saved")
 
+            self.lineEdit_address.clear()
+            self.lineEdit_name.clear()
+            self.lineEdit_lastname.clear()
+            self.lineEdit_NationalCode.clear()
+            self.lineEdit_registeryDate.clear()
+            self.lineEdit_phoneNumber.clear()
+            self.lineEdit_age.clear()
+
         else:
             self.label_Alert.setText("Please complete the form")
 

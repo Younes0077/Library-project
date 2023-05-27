@@ -9,7 +9,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class DepositsUI(object):
+class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(550, 407)
@@ -44,20 +44,20 @@ class DepositsUI(object):
         self.label_NationalCode.setStyleSheet("color:white")
         self.label_NationalCode.setObjectName("label_NationalCode")
         self.verticalLayout_3.addWidget(self.label_NationalCode)
-        self.lineEdit_NationalCode = QtWidgets.QLineEdit(parent=self.frame)
-        self.lineEdit_NationalCode.setStyleSheet("background-color:rgb(255,255,255);\n"
+        self.comboBox_code = QtWidgets.QComboBox(parent=self.frame)
+        self.comboBox_code.setStyleSheet("background-color:rgb(255,255,255);\n"
 "padding:3px;")
-        self.lineEdit_NationalCode.setObjectName("lineEdit_NationalCode")
-        self.verticalLayout_3.addWidget(self.lineEdit_NationalCode)
+        self.comboBox_code.setObjectName("comboBox_code")
+        self.verticalLayout_3.addWidget(self.comboBox_code)
         self.label_ISBN = QtWidgets.QLabel(parent=self.frame)
         self.label_ISBN.setStyleSheet("color:white")
         self.label_ISBN.setObjectName("label_ISBN")
         self.verticalLayout_3.addWidget(self.label_ISBN)
-        self.lineEdit_ISBN = QtWidgets.QLineEdit(parent=self.frame)
-        self.lineEdit_ISBN.setStyleSheet("background-color:rgb(255,255,255);\n"
+        self.comboBox_isbn = QtWidgets.QComboBox(parent=self.frame)
+        self.comboBox_isbn.setStyleSheet("background-color:rgb(255,255,255);\n"
 "padding:3px;")
-        self.lineEdit_ISBN.setObjectName("lineEdit_ISBN")
-        self.verticalLayout_3.addWidget(self.lineEdit_ISBN)
+        self.comboBox_isbn.setObjectName("comboBox_isbn")
+        self.verticalLayout_3.addWidget(self.comboBox_isbn)
         self.label_DateDeliveryToPerson = QtWidgets.QLabel(parent=self.frame)
         self.label_DateDeliveryToPerson.setStyleSheet("color:white")
         self.label_DateDeliveryToPerson.setObjectName("label_DateDeliveryToPerson")
@@ -76,12 +76,10 @@ class DepositsUI(object):
 "padding:3px;")
         self.lineEdit_DateDeliveryFromPerson.setObjectName("lineEdit_DateDeliveryFromPerson")
         self.verticalLayout_3.addWidget(self.lineEdit_DateDeliveryFromPerson)
-        self.label_Alert = QtWidgets.QLabel(parent=self.frame)
-        self.label_Alert.setStyleSheet("color:rgb(204, 16, 16);\n"
-                                       "margin-left:3px")
-        self.label_Alert.setText("")
-        self.label_Alert.setObjectName("label_Alert")
-        self.verticalLayout_3.addWidget(self.label_Alert)
+        self.label_6 = QtWidgets.QLabel(parent=self.frame)
+        self.label_6.setText("")
+        self.label_6.setObjectName("label_6")
+        self.verticalLayout_3.addWidget(self.label_6)
         self.verticalLayout_2.addWidget(self.frame, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.verticalLayout.addWidget(self.widget, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.pushButton_done = QtWidgets.QPushButton(parent=Dialog)

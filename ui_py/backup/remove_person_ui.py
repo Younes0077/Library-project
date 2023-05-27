@@ -12,16 +12,18 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class RemovePersonUi(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(685, 212)
+        Dialog.resize(633, 213)
+        Dialog.setStyleSheet("background-color:#8d99ae;")
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName("verticalLayout")
         self.widget = QtWidgets.QWidget(parent=Dialog)
-        self.widget.setStyleSheet("background-color:rgb(184,184,184);\n"
+        self.widget.setStyleSheet("background-color:#2b2d42;\n"
 "border-radius:10px;")
         self.widget.setObjectName("widget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.frame = QtWidgets.QFrame(parent=self.widget)
+        self.frame.setStyleSheet("background-color:#8d99ae;")
         self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
@@ -31,12 +33,14 @@ class RemovePersonUi(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label.setFont(font)
+        self.label.setStyleSheet("color:white")
         self.label.setObjectName("label")
         self.verticalLayout_3.addWidget(self.label, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         self.label_national_code = QtWidgets.QLabel(parent=self.frame)
         font = QtGui.QFont()
         font.setPointSize(11)
         self.label_national_code.setFont(font)
+        self.label_national_code.setStyleSheet("color:white")
         self.label_national_code.setObjectName("label_national_code")
         self.verticalLayout_3.addWidget(self.label_national_code)
         self.lineEdit_national_code = QtWidgets.QLineEdit(parent=self.frame)
@@ -45,15 +49,20 @@ class RemovePersonUi(object):
         self.lineEdit_national_code.setObjectName("lineEdit_national_code")
         self.verticalLayout_3.addWidget(self.lineEdit_national_code)
         self.label_alert = QtWidgets.QLabel(parent=self.frame)
+        self.label_alert.setStyleSheet("")
         self.label_alert.setText("")
-        self.label_alert.setStyleSheet("color:rgb(204, 16, 16);\n"
-                                       "margin-left:3px")
         self.label_alert.setObjectName("label_alert")
         self.verticalLayout_3.addWidget(self.label_alert)
         self.verticalLayout_2.addWidget(self.frame)
         self.verticalLayout.addWidget(self.widget)
         self.pushButton_done = QtWidgets.QPushButton(parent=Dialog)
-        self.pushButton_done.setStyleSheet("")
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.pushButton_done.setFont(font)
+        self.pushButton_done.setStyleSheet("background-color:#2b2d42;\n"
+"border-radius:6px;\n"
+"color:white\n"
+"")
         self.pushButton_done.setObjectName("pushButton_done")
         self.verticalLayout.addWidget(self.pushButton_done)
 
@@ -65,14 +74,15 @@ class RemovePersonUi(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label.setText(_translate("Dialog", "Remove person"))
         self.label_national_code.setText(_translate("Dialog", "National_code:"))
+        self.lineEdit_national_code.setPlaceholderText(_translate("Dialog", "enter national code"))
         self.pushButton_done.setText(_translate("Dialog", "D O N E"))
 
-#
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     Dialog = QtWidgets.QDialog()
-#     ui = Ui_Dialog()
-#     ui.setupUi(Dialog)
-#     Dialog.show()
-#     sys.exit(app.exec())
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec())

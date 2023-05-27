@@ -43,11 +43,12 @@ class RemoveBookUi(object):
         self.label_isbn.setStyleSheet("color:white")
         self.label_isbn.setObjectName("label_isbn")
         self.verticalLayout_3.addWidget(self.label_isbn, 0, QtCore.Qt.AlignmentFlag.AlignTop)
-        self.lineEdit_isbn = QtWidgets.QLineEdit(parent=self.frame)
-        self.lineEdit_isbn.setStyleSheet("background-color:rgb(255,255,255);\n"
+        self.comboBox_isbn = QtWidgets.QComboBox(parent=self.frame)
+        self.comboBox_isbn.setStyleSheet("background-color:rgb(255,255,255);\n"
 "padding:3px;")
-        self.lineEdit_isbn.setObjectName("lineEdit_isbn")
-        self.verticalLayout_3.addWidget(self.lineEdit_isbn)
+        self.comboBox_isbn.setObjectName("comboBox_isbn")
+        self.comboBox_isbn.addItem("")
+        self.verticalLayout_3.addWidget(self.comboBox_isbn)
         self.label_alert = QtWidgets.QLabel(parent=self.frame)
         self.label_alert.setText("")
         self.label_alert.setObjectName("label_alert")
@@ -73,7 +74,7 @@ class RemoveBookUi(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label_remove_book.setText(_translate("Dialog", "remove book "))
         self.label_isbn.setText(_translate("Dialog", "ISBN:"))
-        self.lineEdit_isbn.setPlaceholderText(_translate("Dialog", "enter Isbn of book"))
+        self.comboBox_isbn.setItemText(0, _translate("Dialog", "9786003400948"))
         self.pushButton_done.setText(_translate("Dialog", "D O N E "))
 
 

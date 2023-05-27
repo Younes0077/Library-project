@@ -67,14 +67,16 @@ border-radius:10px;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_national_code">
+          <widget class="QComboBox" name="comboBox_natinal_code">
            <property name="styleSheet">
             <string notr="true">background-color:rgb(255,255,255);
 padding:3px;</string>
            </property>
-           <property name="placeholderText">
-            <string>enter national code</string>
-           </property>
+           <item>
+            <property name="text">
+             <string>926114816</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item>

@@ -12,26 +12,18 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class AddBookUi(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(520, 565)
+        Dialog.resize(491, 527)
+        Dialog.setStyleSheet("background-color:#8d99ae;")
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName("verticalLayout")
         self.widget = QtWidgets.QWidget(parent=Dialog)
+        self.widget.setStyleSheet("background-color:#2b2d42;\n"
+"border-radius:10px;")
         self.widget.setObjectName("widget")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.label_7 = QtWidgets.QLabel(parent=self.widget)
-        font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setItalic(False)
-        font.setUnderline(False)
-        font.setStrikeOut(False)
-        font.setKerning(True)
-        self.label_7.setFont(font)
-        self.label_7.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_7.setObjectName("label_7")
-        self.verticalLayout_3.addWidget(self.label_7)
         self.frame_2 = QtWidgets.QFrame(parent=self.widget)
-        self.frame_2.setStyleSheet("background-color:rgb(184,184,184);\n"
+        self.frame_2.setStyleSheet("background-color:#8d99ae;\n"
 "border-radius:10px;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -42,7 +34,8 @@ class AddBookUi(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label.setFont(font)
-        self.label.setStyleSheet("padding-left:5px")
+        self.label.setStyleSheet("color:white;\n"
+"padding-left:5px;")
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
         self.lineEdit_name = QtWidgets.QLineEdit(parent=self.frame_2)
@@ -57,7 +50,8 @@ class AddBookUi(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("padding-left:5px")
+        self.label_2.setStyleSheet("color:white;\n"
+"padding-left:5px;")
         self.label_2.setObjectName("label_2")
         self.verticalLayout_2.addWidget(self.label_2)
         self.lineEdit_Author = QtWidgets.QLineEdit(parent=self.frame_2)
@@ -72,7 +66,8 @@ class AddBookUi(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_4.setFont(font)
-        self.label_4.setStyleSheet("padding-left:5px")
+        self.label_4.setStyleSheet("color:white;\n"
+"padding-left:5px;")
         self.label_4.setObjectName("label_4")
         self.verticalLayout_2.addWidget(self.label_4)
         self.lineEdit__ISBN = QtWidgets.QLineEdit(parent=self.frame_2)
@@ -87,7 +82,8 @@ class AddBookUi(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_.setFont(font)
-        self.label_.setStyleSheet("padding-left:5px")
+        self.label_.setStyleSheet("color:white;\n"
+"padding-left:5px;")
         self.label_.setObjectName("label_")
         self.verticalLayout_2.addWidget(self.label_)
         self.lineEdit_Translator = QtWidgets.QLineEdit(parent=self.frame_2)
@@ -102,7 +98,8 @@ class AddBookUi(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_3.setFont(font)
-        self.label_3.setStyleSheet("padding-left:5px")
+        self.label_3.setStyleSheet("color:white;\n"
+"padding-left:5px;")
         self.label_3.setObjectName("label_3")
         self.verticalLayout_2.addWidget(self.label_3)
         self.lineEdit_Publicatipn = QtWidgets.QLineEdit(parent=self.frame_2)
@@ -117,7 +114,8 @@ class AddBookUi(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.label_6.setFont(font)
-        self.label_6.setStyleSheet("padding-left:5px")
+        self.label_6.setStyleSheet("color:white;\n"
+"padding-left:5px;")
         self.label_6.setObjectName("label_6")
         self.verticalLayout_2.addWidget(self.label_6)
         self.lineEdit_NumberOfPages = QtWidgets.QLineEdit(parent=self.frame_2)
@@ -136,13 +134,17 @@ class AddBookUi(object):
         self.label_Alert.setText("")
         self.label_Alert.setObjectName("label_Alert")
         self.verticalLayout_3.addWidget(self.label_Alert)
-        self.pushButton_done = QtWidgets.QPushButton(parent=self.widget)
+        self.verticalLayout.addWidget(self.widget, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.pushButton_done = QtWidgets.QPushButton(parent=Dialog)
         font = QtGui.QFont()
         font.setPointSize(13)
         self.pushButton_done.setFont(font)
+        self.pushButton_done.setStyleSheet("background-color:#2b2d42;\n"
+"border-radius:6px;\n"
+"color:white\n"
+"")
         self.pushButton_done.setObjectName("pushButton_done")
-        self.verticalLayout_3.addWidget(self.pushButton_done)
-        self.verticalLayout.addWidget(self.widget, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.verticalLayout.addWidget(self.pushButton_done)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -150,7 +152,6 @@ class AddBookUi(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label_7.setText(_translate("Dialog", "add book to Library"))
         self.label.setText(_translate("Dialog", "name:"))
         self.label_2.setText(_translate("Dialog", "Author"))
         self.label_4.setText(_translate("Dialog", "ISBN"))

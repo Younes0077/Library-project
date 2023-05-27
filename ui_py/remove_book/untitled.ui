@@ -67,14 +67,16 @@ border-radius:10px;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_isbn">
+          <widget class="QComboBox" name="comboBox_isbn">
            <property name="styleSheet">
             <string notr="true">background-color:rgb(255,255,255);
 padding:3px;</string>
            </property>
-           <property name="placeholderText">
-            <string>enter Isbn of book</string>
-           </property>
+           <item>
+            <property name="text">
+             <string>9786003400948</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item alignment="Qt::AlignTop">

@@ -68,7 +68,7 @@ border-radius:10px;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_NationalCode">
+          <widget class="QComboBox" name="comboBox_code">
            <property name="styleSheet">
             <string notr="true">background-color:rgb(255,255,255);
 padding:3px;</string>
@@ -86,7 +86,7 @@ padding:3px;</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_ISBN">
+          <widget class="QComboBox" name="comboBox_isbn">
            <property name="styleSheet">
             <string notr="true">background-color:rgb(255,255,255);
 padding:3px;</string>

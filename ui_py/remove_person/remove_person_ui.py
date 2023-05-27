@@ -43,11 +43,12 @@ class Ui_Dialog(object):
         self.label_national_code.setStyleSheet("color:white")
         self.label_national_code.setObjectName("label_national_code")
         self.verticalLayout_3.addWidget(self.label_national_code)
-        self.lineEdit_national_code = QtWidgets.QLineEdit(parent=self.frame)
-        self.lineEdit_national_code.setStyleSheet("background-color:rgb(255,255,255);\n"
+        self.comboBox_natinal_code = QtWidgets.QComboBox(parent=self.frame)
+        self.comboBox_natinal_code.setStyleSheet("background-color:rgb(255,255,255);\n"
 "padding:3px;")
-        self.lineEdit_national_code.setObjectName("lineEdit_national_code")
-        self.verticalLayout_3.addWidget(self.lineEdit_national_code)
+        self.comboBox_natinal_code.setObjectName("comboBox_natinal_code")
+        self.comboBox_natinal_code.addItem("")
+        self.verticalLayout_3.addWidget(self.comboBox_natinal_code)
         self.label_alert = QtWidgets.QLabel(parent=self.frame)
         self.label_alert.setStyleSheet("")
         self.label_alert.setText("")
@@ -74,7 +75,7 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label.setText(_translate("Dialog", "Remove person"))
         self.label_national_code.setText(_translate("Dialog", "National_code:"))
-        self.lineEdit_national_code.setPlaceholderText(_translate("Dialog", "enter national code"))
+        self.comboBox_natinal_code.setItemText(0, _translate("Dialog", "926114816"))
         self.pushButton_done.setText(_translate("Dialog", "D O N E"))
 
 
