@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import date
 from ui_py.add_deposits_ui import DepositsUI
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QDialog
@@ -12,7 +13,16 @@ class MyAddDeposits(DepositsUI):
         super().setupUi(Dialog)
         self.grep_data_person()
         self.grep_data_isbn()
+        self.time()
         self.pushButton_done.clicked.connect(self.save_data)
+
+    def time(self):
+        today = date.today()
+        year = str(today.year)
+        month = str(today.month)
+        day = str(today.day)
+        self.lineEdit_DateDeliveryToPerson.setText(f"{year}/{month}/{day}")
+        # print(self.comboBox_isbn.currentText())
 
     def grep_data_person(self):
         code_list = []
