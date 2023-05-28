@@ -10,7 +10,7 @@ class MyRemoveDeposits(RemoveDepositsUi):
         super().setupUi(Dialog)
         self.grep_data_person()
         self.grep_data_isbn()
-        # self.pushButton_done.clicked.connect(Save_data)
+        self.pushButton_done.clicked.connect(self.remove_data_deposits)
 
     def grep_data_person(self):
         code_list = []
@@ -46,4 +46,16 @@ class MyRemoveDeposits(RemoveDepositsUi):
     def remove_data_deposits(self):
         conn = sqlite3.connect("./DataBase/libDatabase.db")
         c = conn.cursor()
-        c.execute(f"DELETE * from")
+        code = int(self.comboBox_national_code.currentText())
+        isbn = int(self.comboBox_isbn.currentText())
+        c.execute(f"DELETE from deposits WHERE code = {code} AND ISBN = {isbn}")
+        conn.commit()
+        conn.close()
+        self.label_alert.setStyleSheet("color:rgb(40, 77, 0);\n"
+                                       "margin-left:3px")
+        self.label_alert.setText("deposits removed")
+        self.comboBox_isbn.clear()
+        self.comboBox_national_code.clear()
+        self.lineEdit_time.clear()
+
+

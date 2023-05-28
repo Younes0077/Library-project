@@ -1,6 +1,7 @@
 from ui_py.remove_book_ui import RemoveBookUi
 import sqlite3
 
+
 class MyRemoveBook(RemoveBookUi):
     def __init__(self):
         super().__init__()
