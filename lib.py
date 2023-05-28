@@ -5,13 +5,20 @@ from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QDialog
 from PyQt6.QtWidgets import QMainWindow
 
-
+from run_ui_py.run_remove_deposits import MyRemoveDeposits
 from run_ui_py.run_remove_book_ui import MyRemoveBook
 from run_ui_py.run_remove_person_ui import MyRemovePerson
 from run_ui_py.run_deposits_ui import MyAddDeposits
 from run_ui_py.run_addBook_ui import MyAddbook
 from run_ui_py.run_registery_ui import MyRegisteryUi
 from ui_py.main_ui import Ui_MainWindow
+
+
+def remove_deposits():
+    ui = MyRemoveDeposits()
+    dialog = QDialog()
+    ui.setupUi(dialog)
+    dialog.exec()
 
 
 def remove_book():
@@ -61,6 +68,7 @@ class LibApp(QMainWindow, Ui_MainWindow):
         self.grep_data_book()
         self.show()
 
+        self.pushButton_remove_deposits.clicked.connect(remove_deposits)
         self.pushButton_add_person.clicked.connect(registery)
         self.pushButton_add_deposits.clicked.connect(add_deposits)
         self.pushButton_add_book.clicked.connect(add_book)
