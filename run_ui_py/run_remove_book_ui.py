@@ -1,6 +1,7 @@
 from ui_py.remove_book_ui import RemoveBookUi
 import sqlite3
 
+from PyQt6.QtGui import QDoubleValidator
 
 class MyRemoveBook(RemoveBookUi):
     def __init__(self):
@@ -10,6 +11,7 @@ class MyRemoveBook(RemoveBookUi):
         super().setupUi(Dialog)
         self.grep_data_isbn()
         self.pushButton_done.clicked.connect(self.delete_data_book)
+        self.comboBox_isbn.setValidator(QDoubleValidator(0.99, 99.99, 2))
 
     def grep_data_isbn(self):
         isbn_list = []

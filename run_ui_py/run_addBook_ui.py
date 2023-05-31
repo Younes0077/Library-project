@@ -1,6 +1,7 @@
 import sqlite3
 
 from ui_py.addBook_ui import AddBookUi
+from PyQt6.QtGui import QDoubleValidator
 
 
 class MyAddbook(AddBookUi):
@@ -11,7 +12,9 @@ class MyAddbook(AddBookUi):
         print("HERE")
         super().setupUi(Dialog)
         self.pushButton_done.clicked.connect(self.save_data)
-
+        self.lineEdit__ISBN.setValidator(QDoubleValidator(0.99, 99.99, 2))
+        self.lineEdit_Publicatipn.setValidator(QDoubleValidator(0.99, 99.99, 2))
+        self.lineEdit_NumberOfPages.setValidator(QDoubleValidator(0.99, 99.99, 2))
     def save_data(self):
 
         condition = True;

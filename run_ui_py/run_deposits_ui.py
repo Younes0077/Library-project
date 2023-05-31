@@ -3,17 +3,20 @@ from datetime import date
 from ui_py.add_deposits_ui import DepositsUI
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QDialog
+from PyQt6.QtGui import QDoubleValidator
+
 
 class MyAddDeposits(DepositsUI):
     def __init__(self):
         super().__init__()
-
 
     def setupUi(self, Dialog):
         super().setupUi(Dialog)
         self.grep_data_person()
         self.grep_data_isbn()
         self.time()
+        self.comboBox_isbn.setValidator(QDoubleValidator(0.99, 99.99, 2))
+        self.comboBox_code.setValidator(QDoubleValidator(0.99, 99.99, 2))
         self.pushButton_done.clicked.connect(self.save_data)
 
     def time(self):

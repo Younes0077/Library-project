@@ -1,6 +1,8 @@
 import sqlite3
 
 from ui_py.remove_person_ui import RemovePersonUi
+from PyQt6.QtGui import QDoubleValidator
+
 
 
 class MyRemovePerson(RemovePersonUi):
@@ -11,6 +13,7 @@ class MyRemovePerson(RemovePersonUi):
         super().setupUi(Dialog)
         self.grep_data_person()
         self.pushButton_done.clicked.connect(self.delete_data_person)
+        self.comboBox_natinal_code.setValidator(QDoubleValidator(0.99, 99.99, 2))
 
     def grep_data_person(self):
         code_list = []

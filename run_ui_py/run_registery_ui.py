@@ -1,17 +1,20 @@
 import sqlite3
 from PyQt6.QtWidgets import QDialog
-import sys
-sys.path.append("..")
+# import sys
+# sys.path.append("..")
 from ui_py.registery_ui import registeryUi
+from PyQt6.QtGui import QDoubleValidator
 
 
 class MyRegisteryUi(registeryUi):
     def __init__(self):
         super().__init__()
 
-
     def setupUi(self, Dialog):
         super().setupUi(Dialog)
+        self.lineEdit_NationalCode.setValidator(QDoubleValidator(0.99, 99.99, 2))
+        self.lineEdit_phoneNumber.setValidator(QDoubleValidator(0.99, 99.99, 2))
+        self.lineEdit_age.setValidator(QDoubleValidator(0.99, 99.99, 2))
         self.pushButton_done.clicked.connect(self.save_data)
 
     def save_data(self):

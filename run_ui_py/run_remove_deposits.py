@@ -1,5 +1,6 @@
 from ui_py.remove_deposits_ui import RemoveDepositsUi
 import sqlite3
+from PyQt6.QtGui import QDoubleValidator
 
 
 class MyRemoveDeposits(RemoveDepositsUi):
@@ -10,6 +11,8 @@ class MyRemoveDeposits(RemoveDepositsUi):
         super().setupUi(Dialog)
         self.grep_data_person()
         self.grep_data_isbn()
+        self.comboBox_isbn.setValidator(QDoubleValidator(0.99, 99.99, 2))
+        self.comboBox_national_code.setValidator(QDoubleValidator(0.99, 99.99, 2))
         self.pushButton_done.clicked.connect(self.remove_data_deposits)
 
     def grep_data_person(self):
