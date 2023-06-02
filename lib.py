@@ -1,6 +1,6 @@
 # from ui_py.addBook_ui import AddBookUi
 import sqlite3
-
+from PyQt6.QtWidgets import QHeaderView
 from PyQt6 import QtWidgets
 from PyQt6.QtWidgets import QDialog
 from PyQt6.QtWidgets import QMainWindow
@@ -67,6 +67,30 @@ class LibApp(QMainWindow, Ui_MainWindow):
         self.grep_data_person()
         self.grep_data_book()
         self.show()
+
+        header = self.tableWidgetPerson.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(4, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(5, QHeaderView.ResizeMode.Stretch)
+
+
+        header = self.tableWidgetBooks.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(4, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(5, QHeaderView.ResizeMode.Stretch)
+
+        header = self.tableWidgetDeposits.horizontalHeader()
+        header.setSectionResizeMode(0, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(3, QHeaderView.ResizeMode.Stretch)
+        header.setSectionResizeMode(4, QHeaderView.ResizeMode.Stretch)
 
         self.pushButton_remove_deposits.clicked.connect(remove_deposits)
         self.pushButton_add_person.clicked.connect(registery)
@@ -206,7 +230,7 @@ class LibApp(QMainWindow, Ui_MainWindow):
             item = QtWidgets.QTableWidgetItem()
             self.tableWidgetDeposits.setVerticalHeaderItem(counter, item)
 
-            for j in range(0, 5):
+            for j in range(0, 6):
                 item = QtWidgets.QTableWidgetItem()
                 self.tableWidgetDeposits.setItem(counter, j, item)
 
@@ -226,5 +250,8 @@ class LibApp(QMainWindow, Ui_MainWindow):
             item = self.tableWidgetDeposits.item(counter, 3)
             # item.setText(self._translate("MainWindow", f"{rec[0]}"))
             item.setText(f"{rec[3]}")
+            item = self.tableWidgetDeposits.item(counter, 4)
+            # item.setText(self._translate("MainWindow", f"{rec[0]}"))
+            item.setText(f"{rec[4]}")
 
             counter = counter + 1

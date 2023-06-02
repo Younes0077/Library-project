@@ -524,12 +524,17 @@ padding:8px;
              </column>
              <column>
               <property name="text">
-               <string>Date Delivery To Person</string>
+               <string>Date Delivery From Person</string>
               </property>
              </column>
              <column>
               <property name="text">
-               <string>Date Delivery From Person</string>
+               <string>Date of delivery to the person</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>The scheduled date of delivery from the person</string>
               </property>
              </column>
             </widget>

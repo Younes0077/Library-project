@@ -69,15 +69,15 @@ class DepositsUI(object):
 "padding:3px;")
         self.lineEdit_DateDeliveryToPerson.setObjectName("lineEdit_DateDeliveryToPerson")
         self.verticalLayout_3.addWidget(self.lineEdit_DateDeliveryToPerson)
-        self.label_DateDeliveryFromPerson = QtWidgets.QLabel(parent=self.frame)
-        self.label_DateDeliveryFromPerson.setStyleSheet("color:white")
-        self.label_DateDeliveryFromPerson.setObjectName("label_DateDeliveryFromPerson")
-        self.verticalLayout_3.addWidget(self.label_DateDeliveryFromPerson)
-        self.lineEdit_DateDeliveryFromPerson = QtWidgets.QLineEdit(parent=self.frame)
-        self.lineEdit_DateDeliveryFromPerson.setStyleSheet("background-color:rgb(255,255,255);\n"
+        self.label_DateDeliveryFromPerson_Scheduled = QtWidgets.QLabel(parent=self.frame)
+        self.label_DateDeliveryFromPerson_Scheduled.setStyleSheet("color:white")
+        self.label_DateDeliveryFromPerson_Scheduled.setObjectName("label_DateDeliveryFromPerson_Scheduled")
+        self.verticalLayout_3.addWidget(self.label_DateDeliveryFromPerson_Scheduled)
+        self.lineEdit_DateDeliveryFromPerson_Scheduled = QtWidgets.QLineEdit(parent=self.frame)
+        self.lineEdit_DateDeliveryFromPerson_Scheduled.setStyleSheet("background-color:rgb(255,255,255);\n"
 "padding:3px;")
-        self.lineEdit_DateDeliveryFromPerson.setObjectName("lineEdit_DateDeliveryFromPerson")
-        self.verticalLayout_3.addWidget(self.lineEdit_DateDeliveryFromPerson)
+        self.lineEdit_DateDeliveryFromPerson_Scheduled.setObjectName("lineEdit_DateDeliveryFromPerson_Scheduled")
+        self.verticalLayout_3.addWidget(self.lineEdit_DateDeliveryFromPerson_Scheduled)
         self.label_Alert = QtWidgets.QLabel(parent=self.frame)
         self.label_Alert.setStyleSheet("color:rgb(204, 16, 16);\n"
                                        "margin-left:3px")
@@ -107,7 +107,7 @@ class DepositsUI(object):
         self.label_NationalCode.setText(_translate("Dialog", "National Code:"))
         self.label_ISBN.setText(_translate("Dialog", "ISBN:"))
         self.label_DateDeliveryToPerson.setText(_translate("Dialog", "Date Delivery To Person:"))
-        self.label_DateDeliveryFromPerson.setText(_translate("Dialog", "Date Delivery From Person:"))
+        self.label_DateDeliveryFromPerson_Scheduled.setText(_translate("Dialog", "Date Delivery From Person (Scheduled):"))
         self.pushButton_done.setText(_translate("Dialog", "DONE"))
 
 #
