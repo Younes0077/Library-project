@@ -44,7 +44,7 @@ class MyRemovePerson(RemovePersonUi):
 
         c.execute(f"SELECT * FROM Person")
         records = c.fetchall()
-        condition_code = True
+        condition_code = False
         for rec in records:
             print(rec[2])
             print(code)

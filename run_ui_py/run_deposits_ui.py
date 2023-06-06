@@ -86,6 +86,8 @@ class MyAddDeposits(DepositsUI):
             c = conn.cursor()
             c.execute(f"SELECT * FROM Person")
             records = c.fetchall()
+            if not records:
+                self.label_Alert.setText("isbn or national code are not valid")
             for rec in records:
                 print(rec[2])
                 print(code)
@@ -98,9 +100,11 @@ class MyAddDeposits(DepositsUI):
                     self.label_Alert.setText("isbn or national code are not valid")
 
             # find isbn code
-            condition_isbn = True
+            condition_isbn = False
             c.execute(f"SELECT * FROM book")
             records = c.fetchall()
+            if not records:
+                self.label_Alert.setText("isbn or national code are not valid")
             for rec in records:
                 if rec[2] == isbn:
                     condition_isbn = True
@@ -111,7 +115,7 @@ class MyAddDeposits(DepositsUI):
                     self.label_Alert.setText("isbn or national code are not valid")
 
             # search for book and code in deposits
-            condition_match = True
+            condition_match = False
             if condition and condition_code and condition_isbn:
                 c.execute(f"SELECT * FROM deposits")
                 records = c.fetchall()

@@ -122,6 +122,7 @@ class LibApp(QMainWindow, Ui_MainWindow):
         conn.close()
 
     def grep_data_person(self):
+        self.tableWidgetPerson.setRowCount(0)
         conn = sqlite3.connect("./DataBase/libDatabase.db")
         c = conn.cursor()
         c.execute("SELECT * FROM Person")
@@ -172,6 +173,7 @@ class LibApp(QMainWindow, Ui_MainWindow):
             # print(rec)
 
     def grep_data_book(self):
+        self.tableWidgetBooks.setRowCount(0)
         conn = sqlite3.connect("./DataBase/libDatabase.db")
         c = conn.cursor()
         c.execute("SELECT * FROM book")
@@ -220,6 +222,7 @@ class LibApp(QMainWindow, Ui_MainWindow):
             # print(rec)
 
     def grep_data_deposits(self):
+        self.tableWidgetDeposits.setRowCount(0)
         conn = sqlite3.connect("./DataBase/libDatabase.db")
         c = conn.cursor()
         c.execute("SELECT * FROM deposits")

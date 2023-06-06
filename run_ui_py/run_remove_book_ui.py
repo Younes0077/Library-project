@@ -38,7 +38,7 @@ class MyRemoveBook(RemoveBookUi):
         else:
             isbn = int(self.comboBox_isbn.currentText())
 
-        condition_isbn = True
+        condition_isbn = False
         c.execute(f"SELECT * FROM book")
         records = c.fetchall()
         for rec in records:
