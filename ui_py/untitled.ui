@@ -543,6 +543,13 @@ padding:8px;
          </widget>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_updateCharts">
+         <property name="text">
+          <string>Update charts </string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>

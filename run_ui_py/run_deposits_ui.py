@@ -72,8 +72,8 @@ class MyAddDeposits(DepositsUI):
         else:
             isbn = int(self.comboBox_isbn.currentText())
 
-        DateDeliveryFromPerson = self.lineEdit_DateDeliveryFromPerson.text()
-        if DateDeliveryFromPerson == "":
+        ScheduledTime = self.lineEdit_DateDeliveryFromPerson_Scheduled.text()
+        if ScheduledTime == "":
             condition = False
         DateDeliveryToPerson = self.lineEdit_DateDeliveryToPerson.text()
         if DateDeliveryToPerson == "":
@@ -112,14 +112,16 @@ class MyAddDeposits(DepositsUI):
 
             # search for book and code in deposits
             condition_match = True
-            c.execute(f"SELECT * FROM deposits")
-            records = c.fetchall()
-            for rec in records:
-                if rec[0] == code and rec[1] == isbn:
-                    condition_match = False
-                    self.label_Alert.setText("This book has already been loaned to this person")
-                else:
-                    condition_match = True
+            if condition and condition_code and condition_isbn:
+                c.execute(f"SELECT * FROM deposits")
+                records = c.fetchall()
+                for rec in records:
+                    if rec[0] == code and rec[1] == isbn:
+                        condition_match = False
+                        self.label_Alert.setText("This book has already been loaned to this person")
+                        break
+                    else:
+                        condition_match = True
 
             print(condition_code)
             print(condition_isbn)
@@ -128,13 +130,13 @@ class MyAddDeposits(DepositsUI):
             if condition and condition_code and condition_isbn and condition_match:
                 conn = sqlite3.connect("./DataBase/libDatabase.db")
                 c = conn.cursor()
-                c.execute(f"""INSERT INTO deposits(code,ISBN,DateDeliveryToPerson,DateDeliveryFromPerson)VALUES({code},{isbn},'{DateDeliveryToPerson}','{DateDeliveryToPerson}')""")
+                c.execute(f"""INSERT INTO deposits(code,ISBN,DateDeliveryToPerson,ScheduledTime)VALUES({code},{isbn},'{DateDeliveryToPerson}','{ScheduledTime}')""")
                 conn.commit()
                 conn.close()
                 self.comboBox_code.clear()
                 self.comboBox_isbn.clear()
                 self.lineEdit_DateDeliveryToPerson.clear()
-                self.lineEdit_DateDeliveryFromPerson.clear()
+                self.lineEdit_DateDeliveryFromPerson_Scheduled.clear()
 
                 self.label_Alert.setStyleSheet("color:rgb(40, 77, 0);\n"
                                                "margin-left:3px")

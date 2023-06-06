@@ -98,6 +98,12 @@ class LibApp(QMainWindow, Ui_MainWindow):
         self.pushButton_add_book.clicked.connect(add_book)
         self.pushButton_remove_person.clicked.connect(remove_person)
         self.pushButton_remove_book.clicked.connect(remove_book)
+        self.pushButton_updateCharts.clicked.connect(self.update_charts)
+
+    def update_charts(self):
+        self.grep_data_deposits()
+        self.grep_data_person()
+        self.grep_data_book()
 
     @staticmethod
     def create_person_data_base(self):

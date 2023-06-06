@@ -73,6 +73,8 @@ class RemoveDepositsUi(object):
         self.lineEdit_time.setObjectName("lineEdit_time")
         self.verticalLayout_4.addWidget(self.lineEdit_time)
         self.label_alert = QtWidgets.QLabel(parent=self.frame)
+        self.label_alert.setStyleSheet("color:rgb(204, 16, 16);\n"
+                                       "margin-left:3px")
         self.label_alert.setText("")
         self.label_alert.setObjectName("label_alert")
         self.verticalLayout_4.addWidget(self.label_alert)

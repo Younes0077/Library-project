@@ -50,6 +50,8 @@ class RemoveBookUi(object):
         self.comboBox_isbn.addItem("")
         self.verticalLayout_3.addWidget(self.comboBox_isbn)
         self.label_alert = QtWidgets.QLabel(parent=self.frame)
+        self.label_alert.setStyleSheet("color:rgb(204, 16, 16);\n"
+                                       "margin-left:3px")
         self.label_alert.setText("")
         self.label_alert.setObjectName("label_alert")
         self.verticalLayout_3.addWidget(self.label_alert, 0, QtCore.Qt.AlignmentFlag.AlignTop)

@@ -50,7 +50,8 @@ class RemovePersonUi(object):
         self.comboBox_natinal_code.addItem("")
         self.verticalLayout_3.addWidget(self.comboBox_natinal_code)
         self.label_alert = QtWidgets.QLabel(parent=self.frame)
-        self.label_alert.setStyleSheet("")
+        self.label_alert.setStyleSheet("color:rgb(204, 16, 16);\n"
+                                       "margin-left:3px")
         self.label_alert.setText("")
         self.label_alert.setObjectName("label_alert")
         self.verticalLayout_3.addWidget(self.label_alert)

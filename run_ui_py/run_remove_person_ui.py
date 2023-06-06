@@ -34,20 +34,39 @@ class MyRemovePerson(RemovePersonUi):
         condition = True
         conn = sqlite3.connect("./DataBase/libDatabase.db")
         c = conn.cursor()
-        national = self.comboBox_natinal_code.currentText()
-        if national == "":
+        code = self.comboBox_natinal_code.currentText()
+        if code == "":
             condition = False
-        print(national)
+        else:
+            code = int(self.comboBox_natinal_code.currentText())
+        print(code)
+        # find national code
+
+        c.execute(f"SELECT * FROM Person")
+        records = c.fetchall()
+        condition_code = True
+        for rec in records:
+            print(rec[2])
+            print(code)
+            if rec[2] == code:
+                condition_code = True
+                print("code found")
+                break
+            else:
+                condition_code = False
 
         if condition:
-            c.execute(f"DELETE FROM Person WHERE NationalCode = {national}")
-            conn.commit()
-            conn.close()
-            self.label_alert.setStyleSheet("color:rgb(40, 77, 0);\n"
-                                       "margin-left:3px")
-            self.label_alert.setText("person removed")
+            if condition_code:
+                c.execute(f"DELETE FROM Person WHERE NationalCode = {code}")
+                conn.commit()
+                conn.close()
+                self.label_alert.setStyleSheet("color:rgb(40, 77, 0);\n"
+                                           "margin-left:3px")
+                self.label_alert.setText("person removed")
 
-            self.comboBox_natinal_code.clear()
+                self.comboBox_natinal_code.clear()
+            else:
+                self.label_alert.setText("national code are not valid")
         else:
             self.label_alert.setText("Please complete the form")
 

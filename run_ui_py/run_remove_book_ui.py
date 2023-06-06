@@ -35,17 +35,32 @@ class MyRemoveBook(RemoveBookUi):
         isbn = self.comboBox_isbn.currentText()
         if isbn == "":
             condition = False
-        print(isbn)
+        else:
+            isbn = int(self.comboBox_isbn.currentText())
+
+        condition_isbn = True
+        c.execute(f"SELECT * FROM book")
+        records = c.fetchall()
+        for rec in records:
+            if rec[2] == isbn:
+                condition_isbn = True
+                print("isbn found")
+                break
+            else:
+                condition_isbn = False
 
         if condition:
-            c.execute(f"DELETE FROM book WHERE ISBN = {isbn}")
-            conn.commit()
-            conn.close()
-            self.label_alert.setStyleSheet("color:rgb(40, 77, 0);\n"
-                                       "margin-left:3px")
-            self.label_alert.setText("book removed")
+            if condition_isbn:
+                c.execute(f"DELETE FROM book WHERE ISBN = {isbn}")
+                conn.commit()
+                conn.close()
+                self.label_alert.setStyleSheet("color:rgb(40, 77, 0);\n"
+                                           "margin-left:3px")
+                self.label_alert.setText("book removed")
 
-            self.comboBox_isbn.clear()
+                self.comboBox_isbn.clear()
+            else:
+                self.label_alert.setText("isbn are not valid")
         else:
             self.label_alert.setText("Please complete the form")
 
