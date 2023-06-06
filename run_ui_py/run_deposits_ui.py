@@ -119,6 +119,8 @@ class MyAddDeposits(DepositsUI):
             if condition and condition_code and condition_isbn:
                 c.execute(f"SELECT * FROM deposits")
                 records = c.fetchall()
+                if not records:
+                    condition_match = True
                 for rec in records:
                     if rec[0] == code and rec[1] == isbn:
                         condition_match = False
