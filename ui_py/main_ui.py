@@ -364,7 +364,7 @@ class Ui_MainWindow(object):
         item = self.tableWidgetDeposits.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "Date of delivery to the person"))
         item = self.tableWidgetDeposits.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "The scheduled date of delivery from the person"))
+        item.setText(_translate("MainWindow", "scheduled date"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.deposits), _translate("MainWindow", "deposits"))
         self.pushButton_updateCharts.setText(_translate("MainWindow", "Update charts "))
         self.pushButton_updateCharts.setStyleSheet("background-color:rgb(255,255,255);")
